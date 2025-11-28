@@ -1336,10 +1336,10 @@ sensor:
   - platform: template
     sensors:
       jour_fr:
-        value_template: "{{ ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'][now().weekday()] }}"
+        value_template: "{{ ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag'][now().weekday()] }}"
 
       date_fr:
-        value_template: "{% set months = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'] %} {{ now().day | string + ' ' + months[now().month-1]}}"
+        value_template: "{% set months = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'] %} {{ now().day | string + '. ' + months[now().month-1]}}"
   - platform: waste_collection_schedule
     name: Collecte des déchets
   - platform: history_stats
