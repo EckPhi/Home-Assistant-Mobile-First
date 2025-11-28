@@ -782,14 +782,14 @@ views:
                         dimFinishedEvents: true
                         disableCalLink: true
                         disableCalLocationLink: true
-                        disableCalEventLink: truemaxEventCount
+                        disableCalEventLink: true
                         noEventsForNextDaysText: Keine Ereignisse in den nächsten Tagen
                         showLoader: false
                         maxEventCount: 4
                         cardHeight: 70px
                         maxDaysToShow: 90
                         showDatePerEvent: true
-                        language: fr
+                        language: de
                         style: |
                           ha-card { 
                             width: 100%;
@@ -3741,7 +3741,7 @@ views:
                 align-items: center;
               }
           - type: custom:xiaomi-vacuum-map-card
-            language: fr
+            language: de
             preset_name: Rez-de-chaussée
             entity: vacuum.aspirateur_rez_de_chaussee
             map_source:
@@ -3926,7 +3926,7 @@ views:
                 align-items: center;
               }
           - type: custom:xiaomi-vacuum-map-card
-            language: fr
+            language: de
             preset_name: Rez-de-chaussée
             entity: vacuum.xiaomi_vacuum_cleaner
             map_source:

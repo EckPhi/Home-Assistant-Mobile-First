@@ -1345,7 +1345,7 @@ sensor:
   - platform: history_stats
     name: Tägliche Schlafzeit
     entity_id: sensor.day_part
-    state: "Nuit"
+    state: "Nacht"
     type: time
     end: "{{ (now().replace(minute=0,second=0) + timedelta(hours=8)).replace(hour=16) }}"
     duration:
