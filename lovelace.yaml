@@ -107,7 +107,7 @@ decluttering_templates:
         text-shadow: 0px 0px 20px var(--card-background-color);
       buttons:
         - layout: name_state
-          name: '{{ states(''sensor.jour_fr'') }}, {{ states(''sensor.date_fr'') }}'
+          name: '{{ states(''sensor.tag_de'') }}, {{ states(''sensor.datum_de'') }}'
           state: '{{ now().strftime(''%H'') }}:{{ now().strftime(''%M'')}}'
           styles:
             name:
@@ -258,7 +258,7 @@ decluttering_templates:
                   margin-top: 20px
             - layout: icon
               icon: mdi:cart-outline
-              name: Liste
+              name: Einkaufsliste
               tap_action:
                 action: navigate
                 navigation_path: /lovelace/liste
@@ -783,7 +783,7 @@ views:
                         disableCalLink: true
                         disableCalLocationLink: true
                         disableCalEventLink: true
-                        noEventsForNextDaysText: Keine Ereignisse in den nächsten Tagen
+                        noEventsForNextDaysText: Keine Termine in den nächsten Tagen
                         showLoader: false
                         maxEventCount: 4
                         cardHeight: 70px
@@ -884,7 +884,7 @@ views:
                             - entity: switch.deezer
                               icon: mdi:music
                               layout: icon_name
-                              name: Flow Deezer
+                              name: Deezer Flow
                               state_styles:
                                 'off':
                                   button:
@@ -1062,7 +1062,7 @@ views:
                         type: custom:multiple-entity-row
                         icon: mdi:battery
                         attribute: battery_level
-                        name: Battery
+                        name: Akku
                         unit: '%'
                         style:
                           hui-generic-entity-row$: |
@@ -1170,7 +1170,7 @@ views:
                           margin-top: '-12px'
                         buttons:
                           - name: >-
-                              Aujourd'hui | {{
+                              Heute | {{
                               states("sensor.envoy_122227015952_today_s_energy_production")
                               | round(2) }} kWh
                             entity: >-
@@ -1183,7 +1183,7 @@ views:
                                 opacity: 0.8
                                 margin-bottom: '-10px'
                           - name: >-
-                              Compteur | {{
+                              Zähler | {{
                               states("sensor.consommation_electricite") | round
                               }} kWh
                             icon: false
@@ -1308,7 +1308,7 @@ views:
                         type: custom:multiple-entity-row
                         icon: mdi:battery
                         attribute: battery_level
-                        name: Battery
+                        name: Akku
                         unit: '%'
                         style:
                           hui-generic-entity-row$: |
@@ -1429,7 +1429,7 @@ views:
                         type: custom:multiple-entity-row
                         icon: mdi:battery
                         attribute: battery_level
-                        name: Battery
+                        name: Akku
                         unit: '%'
                         style:
                           hui-generic-entity-row$: |
@@ -1844,7 +1844,7 @@ views:
                 align-items: center;
               }
           - type: section
-            label: Stimmung
+            label: Atmosphäre
           - type: custom:paper-buttons-row
             buttons:
               - entity: switch.ambiance_auto
@@ -1926,7 +1926,7 @@ views:
             consolidate_entities: true
             child_card: true
             hide_header: false
-            header: Alle Lampen
+            header: Alle Lichter
             color_wheel: true
             persist_features: true
             brightness: true
@@ -2103,7 +2103,7 @@ views:
             consolidate_entities: true
             child_card: true
             hide_header: false
-            header: Alle Lampen
+            header: Alle Lichter
             color_wheel: true
             persist_features: true
             brightness: true
@@ -2179,7 +2179,7 @@ views:
                 margin-bottom: 6px !important;
               }
           - type: section
-            label: Lampen
+            label: Lichter
           - entity: light.led_cuisine
             name: LED
           - entity: light.spots_cuisine
@@ -2199,7 +2199,7 @@ views:
           - entity: fan.hotte_cuisine
             name: Dunstabzugshaube
           - type: section
-            label: Audio-Nachricht
+            label: Sprachnachricht
           - type: custom:vertical-stack-in-card
             cards:
               - type: horizontal-stack
@@ -2354,7 +2354,7 @@ views:
             consolidate_entities: true
             child_card: true
             hide_header: false
-            header: Alle Lampen
+            header: Alle Lichter
             color_wheel: true
             persist_features: true
             brightness: true
@@ -2430,7 +2430,7 @@ views:
                 margin-bottom: 6px !important;
               }
           - type: section
-            label: Lampen
+            label: Lichter
           - entity: light.led_canape
           - entity: light.haut_etagere
           - entity: light.bas_tv
@@ -2456,7 +2456,7 @@ views:
             label: Heimkino
           - entity: input_number.subwoofer
           - entity: automation.denon_auto_subwoofer_level
-            name: Subwoofer Lautstärke auto
+            name: Subwoofer-Lautstärke auto
             icon: mdi:thermostat-box-auto
           - entity: automation.launch_deezer_script_when_i_m_home
             name: Musik auto
@@ -2565,7 +2565,7 @@ views:
             consolidate_entities: true
             child_card: true
             hide_header: false
-            header: Alle Lampen
+            header: Alle Lichter
             color_wheel: true
             persist_features: true
             brightness: true
@@ -2641,7 +2641,7 @@ views:
                 margin-bottom: 6px !important;
               }
           - type: section
-            label: Lampen
+            label: Lichter
           - entity: light.led_salle_a_manger
           - entity: light.lampadaire
           - entity: light.table_salle_a_manger
@@ -2757,7 +2757,7 @@ views:
             consolidate_entities: true
             child_card: true
             hide_header: false
-            header: Alle Lampen
+            header: Alle Lichter
             color_wheel: true
             persist_features: true
             brightness: true
@@ -2833,7 +2833,7 @@ views:
                 margin-bottom: 6px !important;
               }
           - type: section
-            label: Lampen
+            label: Lichter
           - entity: light.spots_dressing
             icon: mdi:hanger
           - entity: light.hue_filament_bulb_1
@@ -2858,7 +2858,7 @@ views:
           - entity: media_player.google_nest_mini_chambre_parentale
             name: Google Nest Mini
           - type: section
-            label: Audio-Nachricht
+            label: Sprachnachricht
           - type: custom:vertical-stack-in-card
             cards:
               - type: horizontal-stack
@@ -3009,7 +3009,7 @@ views:
           - type: section
             label: Hauptraum
           - entity: cover.piece_principale
-            name: Tous
+            name: Alle
           - type: section
             label: Esszimmer
           - entity: cover.baie_vitree_2
@@ -3028,26 +3028,26 @@ views:
           - entity: cover.chambre_1_gauche
             name: Gartenseite
           - type: section
-            label: Schlafzimmer 2
+            label: Gästezimmer
           - entity: cover.chambre_2_droite
             name: Nachbarseite
           - entity: cover.chambre_2_gauche
             name: Gartenseite
           - type: section
-            label: Sonstiges
+            label: Weitere
           - entity: cover.couloir
           - entity: cover.salle_de_bain
           - entity: cover.garage_door
           - type: section
             label: Einstellungen
           - entity: input_boolean.volets_automatique
-            name: Mode automatique
+            name: Automatischer Modus
             icon: mdi:auto-fix
           - entity: automation.volets_fermeture_si_il_fait_ensoleille
-            name: Mode soleil automatique
+            name: Automatischer Sonnenmodus
             icon: mdi:weather-sunny-alert
           - entity: input_boolean.mode_soleil_intensif
-            name: Mode soleil intensif
+            name: Intensiver Sonnenschutzmodus
         style: |
           ha-card {
             margin: 14px 20px 28px !important;
@@ -3098,7 +3098,7 @@ views:
   - theme: noctis
     icon: ''
     path: liste
-    title: Liste
+    title: Einkaufsliste
     visible:
       - user: a27a825440914ad7a919367c2e53793e
       - user: aadd52d881af46bca495e279bee867bf
@@ -3340,7 +3340,7 @@ views:
           - type: entities
             entities:
               - type: section
-                label: Letzte Anwesenheiten
+                label: Letzte Bewegungen
             style: |
               * { 
                 padding: 0 0 0 4px !important;
@@ -3451,7 +3451,7 @@ views:
                 name: Anwesenheitssimulation
                 icon: mdi:lightbulb-auto
               - type: section
-                label: Anwesenheitssensoren
+                label: Bewegungssensoren
               - entity: binary_sensor.presence_maison
                 name: Haus - Allgemein
               - entity: binary_sensor.presence_devant_maison
@@ -3570,25 +3570,25 @@ views:
             name: Rollläden
             icon: mdi:window-shutter
           - entity: automation.volets_fermeture_si_il_fait_ensoleille
-            name: Rollläden - Sonnenmodus
+            name: Rollläden - Sonnenschutz
             icon: mdi:weather-sunny-alert
           - entity: automation.nouvelle_automatisation_2
             name: Staubsauger
             icon: hass:robot-vacuum
           - entity: switch.ambiance_auto
-            name: Lampen Hauptraum
+            name: Lichter Hauptraum
             icon: mdi:lightbulb-auto
           - entity: automation.allume_progressivement_la_chambre
-            name: Lampen Schlafzimmer
+            name: Lichter Schlafzimmer
             icon: hass:lightbulb-auto
           - entity: automation.capteur_dressing_allumage
-            name: Lampen Ankleidezimmer
+            name: Lichter Ankleidezimmer
             icon: hass:lightbulb-auto
           - entity: automation.capteur_cuisiniere_allumage_extinction
-            name: Lampen Dunstabzugshaube
+            name: Lichter Dunstabzugshaube
             icon: hass:lightbulb-auto
           - entity: input_boolean.lampes_facade_auto
-            name: Fassadenbeleuchtung
+            name: Lichter Fassade
             icon: hass:lightbulb-auto
           - entity: automation.turn_off_bedroom_at_night_no_motion
             name: Schlafzimmer nachts ausschalten
@@ -3598,25 +3598,25 @@ views:
           - type: section
             label: Sprachansagen
           - entity: input_boolean.mode_silencieux
-            name: Alles stumm
+            name: Alles stummschalten
             icon: mdi:volume-off
           - entity: automation.nouvelle_automatisation_4
-            name: Mülltonnen-Erinnerung
+            name: Müllabfuhr-Erinnerung
             icon: mdi:message-badge
           - entity: automation.annonce_google_home_arrosage_plantes
-            name: Pflanzenbewässerung-Erinnerung
+            name: Pflanzen gießen Erinnerung
             icon: mdi:message-badge
           - entity: automation.geraldine_est_rentree_tts
-            name: Géraldine ist zurück
+            name: Géraldine ist zu Hause
             icon: mdi:message-badge
           - entity: automation.quentin_est_rentre_tts
-            name: Quentin ist zurück
+            name: Quentin ist zu Hause
             icon: mdi:message-badge
           - type: section
             label: Heimkino
           - entity: input_number.subwoofer
           - entity: automation.denon_auto_subwoofer_level
-            name: Subwoofer Lautstärke auto
+            name: Subwoofer-Lautstärke auto
             icon: mdi:thermostat-box-auto
           - entity: automation.launch_deezer_script_when_i_m_home
             name: Musik auto
@@ -3625,11 +3625,11 @@ views:
             name: Audioquelle auto
             icon: mdi:monitor-speaker
           - type: section
-            label: Sonstige Lampen und Geräte
+            label: Weitere Lampen und Geräte
           - entity: light.spots_facade
-            name: Fassadenbeleuchtung
+            name: Lichter Fassade
           - entity: light.couloir_etage
-            name: Flurlampe Kugel
+            name: Kugellampe Flur
           - entity: light.vmc
             name: Lüftung - Maximale Leistung
           - entity: switch.megaboom_3
@@ -3742,7 +3742,7 @@ views:
               }
           - type: custom:xiaomi-vacuum-map-card
             language: de
-            preset_name: Rez-de-chaussée
+            preset_name: Erdgeschoss
             entity: vacuum.aspirateur_rez_de_chaussee
             map_source:
               camera: camera.map_roborock_rez_de_chaussee
@@ -3927,7 +3927,7 @@ views:
               }
           - type: custom:xiaomi-vacuum-map-card
             language: de
-            preset_name: Rez-de-chaussée
+            preset_name: Erdgeschoss
             entity: vacuum.xiaomi_vacuum_cleaner
             map_source:
               camera: camera.map_roborock_etage
@@ -4046,7 +4046,7 @@ views:
             type: custom:multiple-entity-row
             name: Anwesenheit
             state_header: Abwesend
-            secondary_info: Letzte 24h
+            secondary_info: Letzte 24 Std.
             entities:
               - entity: sensor.quentin_temps_a_domicile
                 name: Zuhause
@@ -4181,8 +4181,8 @@ views:
           - entity: sensor.geraldine_temps_d_absence
             type: custom:multiple-entity-row
             name: Anwesenheit
-            state_header: Abwesend
-            secondary_info: Letzte 24h
+            state_header: Abwesende
+            secondary_info: Letzte 24 Std.
             entities:
               - entity: sensor.geraldine_temps_a_domicile
                 name: Zuhause
@@ -4324,7 +4324,7 @@ views:
             consolidate_entities: true
             child_card: true
             hide_header: false
-            header: Alle Lampen
+            header: Alle Lichter
             color_wheel: true
             persist_features: true
             brightness: true
@@ -4400,9 +4400,9 @@ views:
                 margin-bottom: 6px !important;
               }
           - type: section
-            label: Lampen
+            label: Lichter
           - entity: light.le_plafond_de_la_salle_de_bain
-            name: Plafond
+            name: Decke
           - entity: light.spots_de_la_salle_de_bain
             name: Spots
           - entity: light.led_salle_de_douche
@@ -4492,7 +4492,7 @@ views:
             buttons:
               - icon: mdi:lightning-bolt
                 layout: icon|name
-                name: Énergies
+                name: Energie
                 style:
                   name:
                     margin-left: 18px

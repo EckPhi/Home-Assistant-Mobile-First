@@ -1335,10 +1335,10 @@ sensor:
       - "beat"
   - platform: template
     sensors:
-      jour_fr:
+      tag_de:
         value_template: "{{ ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag'][now().weekday()] }}"
 
-      date_fr:
+      datum_de:
         value_template: "{% set months = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'] %} {{ now().day | string + '. ' + months[now().month-1]}}"
   - platform: waste_collection_schedule
     name: Müllabfuhr
