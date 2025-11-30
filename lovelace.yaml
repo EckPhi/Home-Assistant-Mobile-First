@@ -210,7 +210,7 @@ decluttering_templates:
             cameras:
               - camera_entity: camera.sonnette_pir
                 live_provider: frigate-jsmpeg
-                title: Entrée
+                title: Eingang
             menu:
               buttons:
                 frigate:
@@ -230,7 +230,7 @@ decluttering_templates:
           buttons:
             - entity: input_boolean.mode_silencieux
               layout: icon
-              name: Silence
+              name: Stumm
               style:
                 button:
                   width: 42px
@@ -244,7 +244,7 @@ decluttering_templates:
                   margin-top: 20px
             - layout: icon
               icon: mdi:window-shutter
-              name: Volets
+              name: Rollläden
               tap_action:
                 action: navigate
                 navigation_path: /lovelace/volets
@@ -272,7 +272,7 @@ decluttering_templates:
                   margin-top: 20px
             - icon: mdi:video
               layout: icon
-              name: Sécurité
+              name: Sicherheit
               tap_action:
                 action: navigate
                 navigation_path: /lovelace/securite
@@ -286,7 +286,7 @@ decluttering_templates:
                   margin-top: 20px
             - layout: icon
               icon: mdi:cog
-              name: Réglages
+              name: Einstellungen
               tap_action:
                 action: navigate
                 navigation_path: /lovelace/reglages
@@ -627,7 +627,7 @@ views:
                   }
               - type: custom:slider-button-card
                 entity: light.salle_de_bain
-                name: Salle de douche
+                name: Badezimmer
                 slider:
                   direction: left-right
                   background: gradient
@@ -745,20 +745,20 @@ views:
                       - type: custom:atomic-calendar-revive
                         entities:
                           - entity: calendar.calendrier_google
-                            name: My Calendar
+                            name: Mein Kalender
                             color: white
                             max_results: 12
                             icon: mdi:calendar
                           - entity: calendar.personnel
-                            name: Personnel
+                            name: Persönlich
                             color: white
                             icon: mdi:calendar
                           - entity: calendar.jours_feries_en_belgique
-                            name: Jours fériés en belgique
+                            name: Feiertage in Belgien
                             color: white
                             icon: mdi:party-popper
                           - entity: calendar.geraldine_et_quentin
-                            name: Géraldine et quentin
+                            name: Géraldine und Quentin
                             color: white
                             icon: mdi:calendar
                         firstDayOfWeek: 1
@@ -782,14 +782,14 @@ views:
                         dimFinishedEvents: true
                         disableCalLink: true
                         disableCalLocationLink: true
-                        disableCalEventLink: truemaxEventCount
-                        noEventsForNextDaysText: Aucun événement dans les prochains jours
+                        disableCalEventLink: true
+                        noEventsForNextDaysText: Keine Ereignisse in den nächsten Tagen
                         showLoader: false
                         maxEventCount: 4
                         cardHeight: 70px
                         maxDaysToShow: 90
                         showDatePerEvent: true
-                        language: fr
+                        language: de
                         style: |
                           ha-card { 
                             width: 100%;
@@ -917,7 +917,7 @@ views:
                         card:
                           type: custom:mini-media-player
                           volume_stateless: true
-                          name: Salon
+                          name: Wohnzimmer
                           group: false
                           volume_step: '3'
                           entity: media_player.musique
@@ -1047,7 +1047,7 @@ views:
                             width: max-content !important;
                           }
                       - type: section
-                        label: Tondeuse
+                        label: Rasenmäher
                         style: |
                           div.divider { 
                             display: none;
@@ -1151,7 +1151,7 @@ views:
                             width: max-content !important;
                           }
                       - type: section
-                        label: Énergies
+                        label: Energie
                         style: |
                           div.divider { 
                             display: none;
@@ -1281,7 +1281,7 @@ views:
                             width: max-content !important;
                           }
                       - type: section
-                        label: Aspirateur
+                        label: Staubsauger
                         style: |
                           div.divider { 
                             display: none;
@@ -1293,7 +1293,7 @@ views:
                             font-weight: 600
                           }
                       - type: section
-                        label: Rez-de-chaussée
+                        label: Erdgeschoss
                         style: |
                           div.divider { 
                             display: none;
@@ -1402,7 +1402,7 @@ views:
                             width: max-content !important;
                           }
                       - type: section
-                        label: Aspirateur
+                        label: Staubsauger
                         style: |
                           div.divider { 
                             display: none;
@@ -1414,7 +1414,7 @@ views:
                             font-weight: 600
                           }
                       - type: section
-                        label: Étage
+                        label: Obergeschoss
                         style: |
                           div.divider { 
                             display: none;
@@ -1738,7 +1738,7 @@ views:
         tap_action:
           action: navigate
           navigation_path: /config/dashboard
-        name: Settings
+        name: Einstellungen
         show_state: false
         show_name: false
         style: |
@@ -1799,7 +1799,7 @@ views:
   - theme: noctis
     icon: ''
     path: piece_principale
-    title: Pièce principale
+    title: Hauptraum
     visible:
       - user: a27a825440914ad7a919367c2e53793e
       - user: aadd52d881af46bca495e279bee867bf
@@ -1822,7 +1822,7 @@ views:
             buttons:
               - icon: mdi:home-lightbulb
                 layout: icon|name
-                name: Pièce principale
+                name: Hauptraum
                 style:
                   name:
                     margin-left: 18px
@@ -1844,7 +1844,7 @@ views:
                 align-items: center;
               }
           - type: section
-            label: Ambiance
+            label: Stimmung
           - type: custom:paper-buttons-row
             buttons:
               - entity: switch.ambiance_auto
@@ -1926,7 +1926,7 @@ views:
             consolidate_entities: true
             child_card: true
             hide_header: false
-            header: Toutes les lampes
+            header: Alle Lampen
             color_wheel: true
             persist_features: true
             brightness: true
@@ -2052,7 +2052,7 @@ views:
   - theme: noctis
     icon: ''
     path: cuisine
-    title: Cuisine
+    title: Küche
     visible:
       - user: a27a825440914ad7a919367c2e53793e
       - user: aadd52d881af46bca495e279bee867bf
@@ -2075,7 +2075,7 @@ views:
             buttons:
               - icon: mdi:fridge
                 layout: icon|name
-                name: Cuisine
+                name: Küche
                 style:
                   name:
                     margin-left: 18px
@@ -2103,7 +2103,7 @@ views:
             consolidate_entities: true
             child_card: true
             hide_header: false
-            header: Toutes les lampes
+            header: Alle Lampen
             color_wheel: true
             persist_features: true
             brightness: true
@@ -2179,27 +2179,27 @@ views:
                 margin-bottom: 6px !important;
               }
           - type: section
-            label: Lampes
+            label: Lampen
           - entity: light.led_cuisine
             name: LED
           - entity: light.spots_cuisine
-            name: Plan de travail
+            name: Arbeitsfläche
           - entity: light.bar_cuisine
             name: Bar
             icon: mdi:light-recessed
           - entity: light.hotte_cuisine
-            name: Hotte
+            name: Dunstabzugshaube
           - type: section
-            label: Volets
+            label: Rollläden
           - entity: cover.cuisine
           - type: section
-            label: Appareils
+            label: Geräte
           - entity: sensor.hue_motion_sensor_1_temperature
-            name: Température
+            name: Temperatur
           - entity: fan.hotte_cuisine
-            name: Hotte
+            name: Dunstabzugshaube
           - type: section
-            label: Message audio
+            label: Audio-Nachricht
           - type: custom:vertical-stack-in-card
             cards:
               - type: horizontal-stack
@@ -2207,7 +2207,7 @@ views:
                   - type: entities
                     entities:
                       - entity: input_text.message_google_cuisine
-                        name: Message à envoyer dans la cuisine et la chambre
+                        name: Nachricht an Küche und Schlafzimmer senden
                         card_mod:
                           style:
                             hui-generic-entity-row:
@@ -2303,7 +2303,7 @@ views:
   - theme: noctis
     icon: ''
     path: salon
-    title: Salon
+    title: Wohnzimmer
     visible:
       - user: a27a825440914ad7a919367c2e53793e
       - user: aadd52d881af46bca495e279bee867bf
@@ -2326,7 +2326,7 @@ views:
             buttons:
               - icon: mdi:sofa
                 layout: icon|name
-                name: Salon
+                name: Wohnzimmer
                 style:
                   name:
                     margin-left: 18px
@@ -2354,7 +2354,7 @@ views:
             consolidate_entities: true
             child_card: true
             hide_header: false
-            header: Toutes les lampes
+            header: Alle Lampen
             color_wheel: true
             persist_features: true
             brightness: true
@@ -2430,12 +2430,12 @@ views:
                 margin-bottom: 6px !important;
               }
           - type: section
-            label: Lampes
+            label: Lampen
           - entity: light.led_canape
           - entity: light.haut_etagere
           - entity: light.bas_tv
           - entity: light.spots_haut_tv
-            name: Haut TV
+            name: TV-Bereich
           - entity: light.spots_canape_salle_a_manger
           - entity: light.ambilight
             icon: mdi:television-ambient-light
@@ -2443,26 +2443,26 @@ views:
             label: Ambilight
           - entity: switch.ambihue
           - type: section
-            label: Volets
+            label: Rollläden
           - entity: cover.haut_canape
           - entity: cover.stores_salon
           - type: section
-            label: Appareils
+            label: Geräte
           - entity: sensor.salon_temperature
-            name: Température
+            name: Temperatur
           - entity: switch.television
           - entity: switch.pc
           - type: section
-            label: Home Cinema
+            label: Heimkino
           - entity: input_number.subwoofer
           - entity: automation.denon_auto_subwoofer_level
-            name: Volume subwoofer auto
+            name: Subwoofer Lautstärke auto
             icon: mdi:thermostat-box-auto
           - entity: automation.launch_deezer_script_when_i_m_home
-            name: Musique auto
+            name: Musik auto
             icon: hass:music
           - entity: automation.denon_source_automatique
-            name: Source audio auto
+            name: Audioquelle auto
             icon: mdi:monitor-speaker
         style: |
           ha-card {
@@ -2514,7 +2514,7 @@ views:
   - theme: noctis
     icon: ''
     path: salle_a_manger
-    title: Salle à manger
+    title: Esszimmer
     visible:
       - user: a27a825440914ad7a919367c2e53793e
       - user: aadd52d881af46bca495e279bee867bf
@@ -2537,7 +2537,7 @@ views:
             buttons:
               - icon: mdi:silverware-fork-knife
                 layout: icon|name
-                name: Salle à manger
+                name: Esszimmer
                 style:
                   name:
                     margin-left: 18px
@@ -2565,7 +2565,7 @@ views:
             consolidate_entities: true
             child_card: true
             hide_header: false
-            header: Toutes les lampes
+            header: Alle Lampen
             color_wheel: true
             persist_features: true
             brightness: true
@@ -2641,7 +2641,7 @@ views:
                 margin-bottom: 6px !important;
               }
           - type: section
-            label: Lampes
+            label: Lampen
           - entity: light.led_salle_a_manger
           - entity: light.lampadaire
           - entity: light.table_salle_a_manger
@@ -2650,10 +2650,10 @@ views:
           - entity: light.table_salle_a_manger_3
           - entity: light.spots_canape_salle_a_manger
           - entity: switch.rf_plug_1
-            name: Guirlande
+            name: Lichterkette
             icon: mdi:string-lights
           - type: section
-            label: Volets et rideaux
+            label: Rollläden und Vorhänge
           - entity: cover.baie_vitree_2
           - entity: cover.baie_vitree
         style: |
@@ -2706,7 +2706,7 @@ views:
   - theme: noctis
     icon: ''
     path: chambre
-    title: Chambre
+    title: Schlafzimmer
     visible:
       - user: a27a825440914ad7a919367c2e53793e
       - user: aadd52d881af46bca495e279bee867bf
@@ -2729,7 +2729,7 @@ views:
             buttons:
               - icon: mdi:bed
                 layout: icon|name
-                name: Chambre
+                name: Schlafzimmer
                 style:
                   name:
                     margin-left: 18px
@@ -2757,7 +2757,7 @@ views:
             consolidate_entities: true
             child_card: true
             hide_header: false
-            header: Toutes les lampes
+            header: Alle Lampen
             color_wheel: true
             persist_features: true
             brightness: true
@@ -2833,32 +2833,32 @@ views:
                 margin-bottom: 6px !important;
               }
           - type: section
-            label: Lampes
+            label: Lampen
           - entity: light.spots_dressing
             icon: mdi:hanger
           - entity: light.hue_filament_bulb_1
-            name: Lampe suspendue
+            name: Hängelampe
           - entity: light.chambre_chevet
-            name: Lampes de chevet
+            name: Nachttischlampen
             icon: mdi:lamp
           - entity: light.led_lit
           - type: section
-            label: Volets
+            label: Rollläden
           - entity: cover.chambre_1
-            name: Tous les volets
+            name: Alle Rollläden
           - entity: cover.volet_chambre_parentale_jardin
-            name: Côté jardin
+            name: Gartenseite
           - entity: cover.volet_chambre_parentale_voisin
-            name: Côté voisin
+            name: Nachbarseite
           - type: section
-            label: Appareils
+            label: Geräte
           - entity: sensor.hue_motion_sensor_2_temperature
-            name: Température
+            name: Temperatur
           - entity: switch.bedroom_motion
           - entity: media_player.google_nest_mini_chambre_parentale
             name: Google Nest Mini
           - type: section
-            label: Message audio
+            label: Audio-Nachricht
           - type: custom:vertical-stack-in-card
             cards:
               - type: horizontal-stack
@@ -2866,7 +2866,7 @@ views:
                   - type: entities
                     entities:
                       - entity: input_text.message_google_cuisine
-                        name: Message à envoyer dans la cuisine et la chambre
+                        name: Nachricht an Küche und Schlafzimmer senden
                         card_mod:
                           style:
                             hui-generic-entity-row:
@@ -2962,7 +2962,7 @@ views:
   - theme: noctis
     icon: ''
     path: volets
-    title: Volets
+    title: Rollläden
     visible:
       - user: a27a825440914ad7a919367c2e53793e
       - user: aadd52d881af46bca495e279bee867bf
@@ -2985,7 +2985,7 @@ views:
             buttons:
               - icon: mdi:window-shutter
                 layout: icon|name
-                name: Volets et rideaux
+                name: Rollläden und Vorhänge
                 style:
                   name:
                     margin-left: 18px
@@ -3007,39 +3007,39 @@ views:
                 align-items: center;
               }
           - type: section
-            label: Pièce principale
+            label: Hauptraum
           - entity: cover.piece_principale
             name: Tous
           - type: section
-            label: Salle à manger
+            label: Esszimmer
           - entity: cover.baie_vitree_2
           - entity: cover.baie_vitree
           - type: section
-            label: Salon
+            label: Wohnzimmer
           - entity: cover.haut_canape
           - entity: cover.stores_salon
           - type: section
-            label: Cuisine
+            label: Küche
           - entity: cover.cuisine
           - type: section
-            label: Chambre parentale
+            label: Elternschlafzimmer
           - entity: cover.chambre_1_droite
-            name: Côté voisins
+            name: Nachbarseite
           - entity: cover.chambre_1_gauche
-            name: Côté jardin
+            name: Gartenseite
           - type: section
-            label: Chambre 2
+            label: Schlafzimmer 2
           - entity: cover.chambre_2_droite
-            name: Côté voisins
+            name: Nachbarseite
           - entity: cover.chambre_2_gauche
-            name: Côté jardin
+            name: Gartenseite
           - type: section
-            label: Autres
+            label: Sonstiges
           - entity: cover.couloir
           - entity: cover.salle_de_bain
           - entity: cover.garage_door
           - type: section
-            label: Réglages
+            label: Einstellungen
           - entity: input_boolean.volets_automatique
             name: Mode automatique
             icon: mdi:auto-fix
@@ -3200,7 +3200,7 @@ views:
   - theme: noctis
     icon: ''
     path: securite
-    title: Sécurité
+    title: Sicherheit
     visible:
       - user: a27a825440914ad7a919367c2e53793e
       - user: aadd52d881af46bca495e279bee867bf
@@ -3223,7 +3223,7 @@ views:
                 buttons:
                   - icon: mdi:video
                     layout: icon|name
-                    name: Sécurité
+                    name: Sicherheit
                     style:
                       name:
                         margin-left: 18px
@@ -3250,7 +3250,7 @@ views:
                 cameras:
                   - camera_entity: camera.sonnette_pir
                     live_provider: frigate-jsmpeg
-                    title: Entrée
+                    title: Eingang
                 view:
                   update_force: true
                 menu:
@@ -3270,7 +3270,7 @@ views:
                 cameras:
                   - camera_entity: camera.cuisine_pir
                     live_provider: frigate-jsmpeg
-                    title: Pièce principale
+                    title: Hauptraum
                 view:
                   update_force: true
                 menu:
@@ -3291,7 +3291,7 @@ views:
                   - type: entities
                     entities:
                       - entity: input_text.message_google_cuisine
-                        name: Message à transmettre dans la maison
+                        name: Nachricht im Haus übertragen
                         card_mod:
                           style:
                             hui-generic-entity-row:
@@ -3340,7 +3340,7 @@ views:
           - type: entities
             entities:
               - type: section
-                label: Dernières présences
+                label: Letzte Anwesenheiten
             style: |
               * { 
                 padding: 0 0 0 4px !important;
@@ -3392,7 +3392,7 @@ views:
           - type: entities
             entities:
               - type: section
-                label: Derniers enregistrements
+                label: Letzte Aufnahmen
             style: |
               * { 
                 padding: 0 0 0 4px !important;
@@ -3436,40 +3436,40 @@ views:
           - type: entities
             entities:
               - type: section
-                label: Réglages
+                label: Einstellungen
               - entity: >-
                   automation.securite_notification_google_home_en_cas_de_presence_sur_une_camera
-                name: Notifications présence audio
+                name: Audio-Anwesenheitsbenachrichtigungen
                 icon: mdi:volume-high
               - entity: automation.bouton_sonnette_sonnerie_dans_la_chambre
-                name: Notifications sonnette audio
+                name: Audio-Klingelbenachrichtigungen
                 icon: mdi:volume-high
               - entity: automation.securite_notification_en_cas_de_mouvements
-                name: Notifications présence smartphones
+                name: Smartphone-Anwesenheitsbenachrichtigungen
                 icon: mdi:square-rounded-badge-outline
               - entity: automation.securite_simulation_presence_si_absent_2
-                name: Simulation de présence
+                name: Anwesenheitssimulation
                 icon: mdi:lightbulb-auto
               - type: section
-                label: Capteurs de présences
+                label: Anwesenheitssensoren
               - entity: binary_sensor.presence_maison
-                name: Maison - Général
+                name: Haus - Allgemein
               - entity: binary_sensor.presence_devant_maison
-                name: Avant de la maison
+                name: Vor dem Haus
               - entity: binary_sensor.presence_hall_entree
-                name: Hall d'entrée
+                name: Eingangsbereich
               - entity: binary_sensor.presence_cuisine
-                name: Cuisine
+                name: Küche
               - entity: binary_sensor.presence_salle_a_manger
-                name: Salle à manger
+                name: Esszimmer
               - entity: binary_sensor.presence_salon
-                name: Salon
+                name: Wohnzimmer
               - entity: binary_sensor.presence_couloir
-                name: Couloir étage
+                name: Flur Obergeschoss
               - entity: binary_sensor.presence_chambre_parentale
-                name: Chambre parentale
+                name: Elternschlafzimmer
               - entity: binary_sensor.presence_salle_de_douche
-                name: Salle de douche
+                name: Badezimmer
         style: |
           ha-card {
             margin: 14px 20px 28px !important;
@@ -3520,7 +3520,7 @@ views:
   - theme: noctis
     icon: ''
     path: reglages
-    title: Réglages
+    title: Einstellungen
     visible:
       - user: a27a825440914ad7a919367c2e53793e
       - user: aadd52d881af46bca495e279bee867bf
@@ -3543,7 +3543,7 @@ views:
             buttons:
               - icon: mdi:cog
                 layout: icon|name
-                name: Réglages et divers
+                name: Einstellungen und Sonstiges
                 style:
                   name:
                     margin-left: 18px
@@ -3565,87 +3565,87 @@ views:
                 align-items: center;
               }
           - type: section
-            label: Automatisations
+            label: Automatisierungen
           - entity: input_boolean.volets_automatique
-            name: Volets
+            name: Rollläden
             icon: mdi:window-shutter
           - entity: automation.volets_fermeture_si_il_fait_ensoleille
-            name: Volets - Mode soleil
+            name: Rollläden - Sonnenmodus
             icon: mdi:weather-sunny-alert
           - entity: automation.nouvelle_automatisation_2
-            name: Aspirateurs
+            name: Staubsauger
             icon: hass:robot-vacuum
           - entity: switch.ambiance_auto
-            name: Lampes pièce principale
+            name: Lampen Hauptraum
             icon: mdi:lightbulb-auto
           - entity: automation.allume_progressivement_la_chambre
-            name: Lampes chambre
+            name: Lampen Schlafzimmer
             icon: hass:lightbulb-auto
           - entity: automation.capteur_dressing_allumage
-            name: Lampes dressing
+            name: Lampen Ankleidezimmer
             icon: hass:lightbulb-auto
           - entity: automation.capteur_cuisiniere_allumage_extinction
-            name: Lampes hotte
+            name: Lampen Dunstabzugshaube
             icon: hass:lightbulb-auto
           - entity: input_boolean.lampes_facade_auto
-            name: Lampes façade
+            name: Fassadenbeleuchtung
             icon: hass:lightbulb-auto
           - entity: automation.turn_off_bedroom_at_night_no_motion
-            name: Éteins la chambre la nuit
+            name: Schlafzimmer nachts ausschalten
             icon: hass:bed
           - entity: input_boolean.mode_nuit
-            name: Mode nuit
+            name: Nachtmodus
           - type: section
-            label: Annonces vocales
+            label: Sprachansagen
           - entity: input_boolean.mode_silencieux
-            name: Tout silencieux
+            name: Alles stumm
             icon: mdi:volume-off
           - entity: automation.nouvelle_automatisation_4
-            name: Rappel poubelles
+            name: Mülltonnen-Erinnerung
             icon: mdi:message-badge
           - entity: automation.annonce_google_home_arrosage_plantes
-            name: Rappel arrosage plantes
+            name: Pflanzenbewässerung-Erinnerung
             icon: mdi:message-badge
           - entity: automation.geraldine_est_rentree_tts
-            name: Géraldine est rentrée
+            name: Géraldine ist zurück
             icon: mdi:message-badge
           - entity: automation.quentin_est_rentre_tts
-            name: Quentin est rentré
+            name: Quentin ist zurück
             icon: mdi:message-badge
           - type: section
-            label: Home Cinema
+            label: Heimkino
           - entity: input_number.subwoofer
           - entity: automation.denon_auto_subwoofer_level
-            name: Volume subwoofer auto
+            name: Subwoofer Lautstärke auto
             icon: mdi:thermostat-box-auto
           - entity: automation.launch_deezer_script_when_i_m_home
-            name: Musique auto
+            name: Musik auto
             icon: hass:music
           - entity: automation.denon_source_automatique
-            name: Source audio auto
+            name: Audioquelle auto
             icon: mdi:monitor-speaker
           - type: section
-            label: Autres lampes et appareils
+            label: Sonstige Lampen und Geräte
           - entity: light.spots_facade
-            name: Lampes façade
+            name: Fassadenbeleuchtung
           - entity: light.couloir_etage
-            name: Lampe boule couloir
+            name: Flurlampe Kugel
           - entity: light.vmc
-            name: VMC - Puissance Max
+            name: Lüftung - Maximale Leistung
           - entity: switch.megaboom_3
             type: custom:multiple-entity-row
-            name: Salle de bain
+            name: Badezimmer
             toggle: true
             state_color: true
             entities:
               - entity: sensor.mebaboom_3_battery
                 name: false
           - type: section
-            label: Capteurs
+            label: Sensoren
           - entity: binary_sensor.darkness_sensor_2
-            name: Obscurité pièce principale
+            name: Dunkelheit Hauptraum
           - entity: binary_sensor.darkness_sensor
-            name: Obscurité chambre
+            name: Dunkelheit Schlafzimmer
         style: |
           ha-card {
             margin: 14px 20px 28px !important;
@@ -3696,7 +3696,7 @@ views:
   - theme: noctis
     icon: ''
     path: aspirateur_rez_de_chaussee
-    title: Aspirateur rez-de-chaussée
+    title: Staubsauger Erdgeschoss
     visible:
       - user: a27a825440914ad7a919367c2e53793e
       - user: aadd52d881af46bca495e279bee867bf
@@ -3719,7 +3719,7 @@ views:
             buttons:
               - icon: mdi:robot-vacuum
                 layout: icon|name
-                name: Aspirateur - Rez-de-chaussée
+                name: Staubsauger - Erdgeschoss
                 style:
                   name:
                     margin-left: 18px
@@ -3741,7 +3741,7 @@ views:
                 align-items: center;
               }
           - type: custom:xiaomi-vacuum-map-card
-            language: fr
+            language: de
             preset_name: Rez-de-chaussée
             entity: vacuum.aspirateur_rez_de_chaussee
             map_source:
@@ -3764,7 +3764,7 @@ views:
                       x: 21950
                       'y': 30405
                     label:
-                      text: Cuisine
+                      text: Küche
                       x: 21950
                       'y': 30405
                       offset_y: 30
@@ -3774,7 +3774,7 @@ views:
                       x: 26200
                       'y': 27300
                     label:
-                      text: Salon
+                      text: Wohnzimmer
                       x: 26200
                       'y': 27300
                       offset_y: 30
@@ -3784,7 +3784,7 @@ views:
                       x: 21205
                       'y': 27075
                     label:
-                      text: Entrée
+                      text: Eingang
                       x: 21205
                       'y': 27075
                       offset_y: 30
@@ -3804,7 +3804,7 @@ views:
                       x: 26200
                       'y': 30605
                     label:
-                      text: Salle à manger
+                      text: Esszimmer
                       x: 26200
                       'y': 30605
                       offset_y: 30
@@ -3881,7 +3881,7 @@ views:
   - theme: noctis
     icon: ''
     path: aspirateur_etage
-    title: Aspirateur étage
+    title: Staubsauger Obergeschoss
     visible:
       - user: a27a825440914ad7a919367c2e53793e
       - user: aadd52d881af46bca495e279bee867bf
@@ -3904,7 +3904,7 @@ views:
             buttons:
               - icon: mdi:robot-vacuum
                 layout: icon|name
-                name: Aspirateur - Étage
+                name: Staubsauger - Obergeschoss
                 style:
                   name:
                     margin-left: 18px
@@ -3926,7 +3926,7 @@ views:
                 align-items: center;
               }
           - type: custom:xiaomi-vacuum-map-card
-            language: fr
+            language: de
             preset_name: Rez-de-chaussée
             entity: vacuum.xiaomi_vacuum_cleaner
             map_source:
@@ -4044,21 +4044,21 @@ views:
           - type: section
           - entity: sensor.quentin_temps_d_absence
             type: custom:multiple-entity-row
-            name: Présence
-            state_header: Absent
-            secondary_info: Dernières 24h
+            name: Anwesenheit
+            state_header: Abwesend
+            secondary_info: Letzte 24h
             entities:
               - entity: sensor.quentin_temps_a_domicile
-                name: Domicile
+                name: Zuhause
           - type: section
           - entity: sensor.mi_9_battery_level
             type: custom:multiple-entity-row
-            name: État du téléphone
-            state_header: Batterie
+            name: Telefonstatus
+            state_header: Akku
           - type: section
           - entity: sensor.mi_9_geocoded_location
             type: custom:multiple-entity-row
-            name: Localisation
+            name: Standort
             styles:
               text-align: right
           - type: section
@@ -4067,7 +4067,7 @@ views:
               - type: history-graph
                 entities:
                   - entity: sensor.quentin_presence
-                    name: Présence
+                    name: Anwesenheit
                 hours_to_show: 24
                 refresh_interval: 0
                 style: |
@@ -4180,24 +4180,24 @@ views:
           - type: section
           - entity: sensor.geraldine_temps_d_absence
             type: custom:multiple-entity-row
-            name: Présence
-            state_header: Absente
-            secondary_info: Dernières 24h
+            name: Anwesenheit
+            state_header: Abwesend
+            secondary_info: Letzte 24h
             entities:
               - entity: sensor.geraldine_temps_a_domicile
-                name: Domicile
+                name: Zuhause
           - type: section
           - entity: sensor.iphone_de_geraldine_battery_level
             type: custom:multiple-entity-row
-            name: État du téléphone
-            state_header: Batterie
+            name: Telefonstatus
+            state_header: Akku
             entities:
               - entity: sensor.iphone_de_geraldine_activity
-                name: Activité
+                name: Aktivität
           - type: section
           - entity: sensor.iphone_de_geraldine_geocoded_location
             type: custom:multiple-entity-row
-            name: Localisation
+            name: Standort
             styles:
               text-align: right
           - type: section
@@ -4273,7 +4273,7 @@ views:
   - theme: noctis
     icon: ''
     path: salle_de_douche
-    title: Salle de douche
+    title: Badezimmer
     visible:
       - user: a27a825440914ad7a919367c2e53793e
       - user: aadd52d881af46bca495e279bee867bf
@@ -4296,7 +4296,7 @@ views:
             buttons:
               - icon: mdi:shower-head
                 layout: icon|name
-                name: Salle de douche
+                name: Badezimmer
                 style:
                   name:
                     margin-left: 18px
@@ -4324,7 +4324,7 @@ views:
             consolidate_entities: true
             child_card: true
             hide_header: false
-            header: Toutes les lampes
+            header: Alle Lampen
             color_wheel: true
             persist_features: true
             brightness: true
@@ -4400,7 +4400,7 @@ views:
                 margin-bottom: 6px !important;
               }
           - type: section
-            label: Lampes
+            label: Lampen
           - entity: light.le_plafond_de_la_salle_de_bain
             name: Plafond
           - entity: light.spots_de_la_salle_de_bain
@@ -4408,15 +4408,15 @@ views:
           - entity: light.led_salle_de_douche
             name: LED
           - type: section
-            label: Appareils
+            label: Geräte
           - entity: sensor.salle_de_bain_temperature
-            name: Température
+            name: Temperatur
           - type: section
-            label: Musique
+            label: Musik
           - entity: input_select.musique_salle_de_bain
-            name: Playlist
+            name: Wiedergabeliste
           - entity: switch.musique_salle_de_douche
-            name: Lancer la playlist
+            name: Wiedergabeliste starten
           - entity: media_player.salle_de_douche
             name: Google Nest Audio
         style: |
@@ -4469,7 +4469,7 @@ views:
   - theme: noctis
     icon: ''
     path: energies
-    title: Énergies
+    title: Energie
     visible:
       - user: a27a825440914ad7a919367c2e53793e
       - user: aadd52d881af46bca495e279bee867bf
@@ -4515,21 +4515,21 @@ views:
               }
           - type: section
           - entity: sensor.envoy_122227015952_today_s_energy_production
-            name: Production aujourd'hui
+            name: Produktion heute
           - entity: sensor.energy_production_tomorrow
-            name: Production estimée demain
+            name: Geschätzte Produktion morgen
           - entity: sensor.envoy_122227015952_last_seven_days_energy_production
-            name: Production sur 7 jours
+            name: Produktion 7 Tage
           - entity: sensor.envoy_122227015952_lifetime_energy_production
-            name: Production totale
+            name: Gesamtproduktion
           - entity: sensor.consommation_electricite
-            name: Consommation totale
+            name: Gesamtverbrauch
           - entity: sensor.electricite_consommee_moyenne_journaliere
-            name: Consommation moyenne
+            name: Durchschnittsverbrauch
           - entity: input_number.electricite_jour_semaine
-            name: Index jour
+            name: Tageszähler
           - entity: input_number.electricite_nuit_semaine
-            name: Index nuit
+            name: Nachtzähler
         footer:
           type: custom:mini-graph-card
           entities:
@@ -4601,7 +4601,7 @@ views:
           ### This is why I have to add the CSS here
           ### If you don't use the UI you can use YAML anchors instead
   - theme: Backend-selected
-    title: Recherche
+    title: Suche
     path: recherche
     type: sidebar
     subview: true
@@ -4615,7 +4615,7 @@ views:
         url: /media-browser/media_player.youtube/search%2C
         aspect_ratio: 150%
   - theme: noctis
-    title: Musique
+    title: Musik
     path: musique
     subview: true
     type: sidebar
@@ -4684,7 +4684,7 @@ views:
       - type: entities
         entities:
           - entity: input_select.type_de_contenu
-            name: Type de contenu à rechercher
+            name: Zu suchender Inhaltstyp
             card_mod:
               style:
                 hui-generic-entity-row:
